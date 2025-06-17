@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приглашение на свадьбу</title>
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/ouvality-cyrillic">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Ouvality Cyrillic', serif;
+      background-color: #fdf7f1;
+      color: #3b3b3b;
+      line-height: 1.6;
+      padding: 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    h1, h2, h3 {
+      font-family: 'Ouvality Cyrillic', serif;
+      font-weight: 600;
+      color: #5a5a2c;
+      margin-bottom: 1rem;
+    }
+    .names {
+      font-size: 2.5rem;
+      margin-top: 1rem;
+    }
+    .date {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+    .subtitle {
+      font-weight: bold;
+      color: #5a5a2c;
+      margin-top: 1.5rem;
+    }
+    .calendar table {
+      margin: 1rem auto;
+      border-collapse: collapse;
+    }
+    .calendar th, .calendar td {
+      padding: 0.3rem;
+      width: 2rem;
+      height: 2rem;
+      text-align: center;
+    }
+    .calendar td.selected {
+      background-color: #a4c49a;
+      border-radius: 50%;
+      color: white;
+    }
+    .button, button {
+      background-color: #6e8753;
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: 999px;
+      font-size: 1rem;
+      margin-top: 2rem;
+      cursor: pointer;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    label {
+      font-weight: bold;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 0.5rem;
+      border: none;
+      border-bottom: 1px solid #999;
+      background: transparent;
+    }
+    .checkboxes, .radios {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .form-block {
+      width: 100%;
+    }
+    .floral {
+      width: 100%;
+      max-width: 250px;
+      margin: 1rem auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="flowers/flower.png" alt="Цветы" class="floral">
+  <section>
+    <h1 class="names">Андрей<br>и<br>Натали</h1>
+    <div class="subtitle">Дата</div>
+    <div class="date">29.08.2025</div>
+    <h2>Дорогие гости!</h2>
+    <p>Будем рады, если вы разделите с нами счастливый день создания нашей семьи!</p>
+  </section>
+  <img src="flowers/flower.png" alt="Цветы" class="floral">
+
+  <section class="calendar">
+    <h2>Август</h2>
+    <table>
+      <tr><th>пн</th><th>вт</th><th>ср</th><th>чт</th><th>пт</th><th>сб</th><th>вс</th></tr>
+      <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+      <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td></tr>
+      <tr><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td></tr>
+      <tr><td>22</td><td>23</td><td class="selected">24</td><td>25</td><td>26</td><td>27</td><td>28</td></tr>
+      <tr><td>29</td><td>30</td><td>31</td><td></td><td></td><td></td><td></td></tr>
+    </table>
+  </section>
+  <img src="flowers/flower.png" alt="Цветы" class="floral">
+
+  <section>
+    <h2>Место проведения</h2>
+    <p>Загородный дом<br>ул Охотницкая 58Б, город Рязань</p>
+    <button>Посмотреть на карте</button>
+  </section>
+  <img src="flowers/flower.png" alt="Цветы" class="floral">
+
+  <section>
+    <h2>Тайминг</h2>
+    <p>15:30 — Сбор гостей</p>
+    <p>16:00 — Банкет</p>
+    <p>21:00 — Свадебный торт</p>
+    <p>23:00 — Завершение вечера</p>
+  </section>
+  <img src="flowers/flower.png" alt="Цветы" class="floral">
+
+  <section>
+    <h2>Пожелания</h2>
+    <p><strong>Цветы:</strong> Пожалуйста, не дарите нам цветы, т.к. мы не успеем насладиться их красотой.</p>
+    <p><strong>Что дарить?</strong> Подарки в бюджет нашей семьи помогут исполнить мечту.</p>
+    <p><strong>Дресс-код:</strong> Главное — ваше присутствие! Но откажитесь от тёмного верха.</p>
+  </section>
+  <img src="flowers/flower.png" alt="Цветы" class="floral">
+
+  <section>
+    <h2>Анкета гостя</h2>
+    <p>Пожалуйста, чтобы всё прошло идеально, ответьте на несколько вопросов:</p>
+    <form action="https://formspree.io/f/xnqedjky" method="POST">
+      <div class="form-block">
+        <label for="name">ИМЯ</label>
+        <input type="text" id="name" name="name" placeholder="Иванова Анна Ивановна" required>
+      </div>
+
+      <div class="form-block radios">
+        <label>Планируете ли вы присутствовать на свадьбе?</label>
+        <label><input type="radio" name="attend" value="Да" required> Да</label>
+        <label><input type="radio" name="attend" value="Нет"> Нет</label>
+        <label><input type="radio" name="attend" value="Отвечу позже"> Отвечу позже</label>
+      </div>
+
+      <div class="form-block checkboxes">
+        <label>Уточните предпочтения в алкоголе:</label>
+        <label><input type="checkbox" name="alcohol" value="вино красное"> вино красное</label>
+        <label><input type="checkbox" name="alcohol" value="вино белое"> вино белое</label>
+        <label><input type="checkbox" name="alcohol" value="водка"> водка</label>
+        <label><input type="checkbox" name="alcohol" value="виски"> виски</label>
+        <label><input type="checkbox" name="alcohol" value="коньяк"> коньяк</label>
+        <label><input type="checkbox" name="alcohol" value="шампанское"> шампанское</label>
+        <label><input type="checkbox" name="alcohol" value="текила"> текила</label>
+      </div>
+
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+  <img src="flowers/flower.png" alt="Цветы" class="floral">
+
+</body>
+</html>
